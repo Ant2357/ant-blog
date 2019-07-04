@@ -1,0 +1,7 @@
+.wf-nicomoji { font-family: "Nico Moji"; }
+
+.jumbotron-img-main {
+  background-image: url("../img/池上本門寺.png");
+  background-size: cover;
+  background-position: center 50%;
+}

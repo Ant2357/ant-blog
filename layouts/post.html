@@ -8,16 +8,22 @@
       <span><%= data.date %></span>
     </time>
   <% } %>
-  <div class="post-tags">
+  <div class="post-tags mb-3">
     <% if(data.tags) { %>
       <% data.tags.forEach(function(tag) { %>
         <% if(tag) { %>
-          <a href="#/posts?tag=<%= tag %>" class="post-tag"><%= tag %></a>
+          <a href="#/posts?tag=<%= tag %>" class="post-tag btn btn-sm btn-outline-primary"><%= tag %></a>
         <% } %>
       <% }) %>
     <% } %>
   </div>
-  <div class="post-content">
+  <div class="post-content mb-4">
     <%= data.body %>
   </div>
+  <p class="text-right">
+    <a href="https://twitter.com/intent/tweet?text=Antのブログらしきもの_<%= data.title %>&url=<%= (location.href).replace(/#/g , '%23')%>"
+      class="btn btn-sm btn-primary"
+      role="button"
+    ><i class="fab fa-twitter fa-fw"></i>ツイート</a>
+  </p>
 </article>
