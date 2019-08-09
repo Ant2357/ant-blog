@@ -5,7 +5,7 @@
       <div class="card mb-3">
         <div class="card-body">
           <h4 class="card-title post-title"><a href="<%= post.permalink %>"><%= post.title %></a></h4>
-          <h6 class="card-subtitle mb-2 text-muted post-date"><%= post.date %></h6>
+          <h6 class="card-subtitle mb-2 text-muted post-date"><%= jpDateConversion(post.date) %></h6>
           <% if(post.excerpt) { %>
             <p class="card-text"><%= post.excerpt %></p>
           <% } %>
